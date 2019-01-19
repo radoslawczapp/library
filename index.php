@@ -2,10 +2,7 @@
 
 require_once 'core/init.php';
 
-$user = DB::getInstance()->get('users', array('username', '=', 'john'));
-
-if(!$user->count()){
-    echo 'no user';
-} else{
-    echo $user->first()->username;
-}
+$userInsert = DB::getInstance()->update('users', 3, array(
+    'username' => 'Johnny',
+    'name' => 'Johnny Grace'
+));
