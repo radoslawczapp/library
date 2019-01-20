@@ -51,8 +51,12 @@ class User {
                 Session::put($this->_sessionName, $this->data()->id);
                 return true;
             }
+        }
+        return false;
     }
-    return false;
+
+    public function logout(){
+        Session::delete($this->_sessionName);
     }
 
     public function data(){
