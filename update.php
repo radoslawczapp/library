@@ -2,6 +2,11 @@
 
 require_once 'core/init.php';
 
+echo "<div class='maincontainer'>";
+
+// Header
+include 'includes/header.php';
+
 $user = new User();
 
 if(!$user->isLoggedIn()) {
@@ -51,3 +56,8 @@ if(Input::exists()) {
 </form>
 
 <a href="index.php">Back to Index</a>
+
+<?php
+  echo "</div> <!-- //maincontainer -->";
+  include 'includes/footer.php';
+?>

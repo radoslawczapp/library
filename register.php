@@ -1,5 +1,9 @@
 <?php
   require_once 'core/init.php';
+  echo "<div class='maincontainer'>";
+
+// Header
+include 'includes/header.php';
 
 //var_dump(Token::check(Input::get('token')));
 
@@ -100,3 +104,7 @@
   <input type="submit" value="Register">
 
 </form>
+<?php
+  echo "</div> <!-- //maincontainer -->";
+  include 'includes/footer.php';
+?>

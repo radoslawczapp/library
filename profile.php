@@ -2,6 +2,9 @@
 // Core Initialization
 require_once 'core/init.php';
 
+echo "<div class='maincontainer'>";
+include 'includes/header.php';
+
 if (!$username = Input::get('user')) {
   Redirect::to('index.php');
 } else {
@@ -20,3 +23,6 @@ if (!$username = Input::get('user')) {
 
   <?php
 }
+
+echo "</div> <!-- //maincontainer -->";
+include 'includes/footer.php';

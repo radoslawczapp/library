@@ -2,6 +2,8 @@
 // Core Initialization
 require_once 'core/init.php';
 
+
+include 'includes/header.php';
 /*Teste de Configuração video "06. Config Class"
 echo Config::get('mysql/host'); // 'localhost'
 var_dump(Config::get('mysql/host/index'));
@@ -88,3 +90,6 @@ if ($user->isLoggedIn()) {
 } else {
   echo "<p>You need to <a href='login.php'>log in</a> or <a href='register.php'>register</a></p>";
 }
+echo "</div> <!-- //maincontainer -->";
+
+include 'includes/footer.php';

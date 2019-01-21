@@ -1,7 +1,10 @@
 
 <?php
 require_once 'core/init.php';
+echo "<div class='maincontainer'>";
 
+// Header
+include 'includes/header.php';
 if (Input::exists()) {
   //echo "teste";
   if(Token::check(Input::get('token'))) {
@@ -55,3 +58,7 @@ if (Input::exists()) {
   <input type="hidden" name="token" value="<?php echo Token::generate(); ?>">
   <input type="Submit" value="Login">
 </form>
+<?php
+  echo "</div> <!-- //maincontainer -->";
+  include 'includes/footer.php';
+?>
